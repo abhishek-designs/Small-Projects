@@ -1,0 +1,215 @@
+/* Variables */
+:root
+{
+    --primary-color:linear-gradient(40deg,purple,orange);
+    --secondary-color:#bbb;
+    --light-color:#fff;
+    --dark-color:#333;
+    --google:#fff;
+    --facebook:linear-gradient(40deg,navy,blue);
+    --max-width:1000px;
+    --animation-speed:0.5s;
+}
+
+/* Default Settings */
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body
+{
+    line-height:1.5;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a
+{
+    text-decoration:none;
+    color:#ccc;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    padding-bottom:0.6rem;
+}
+
+label
+{
+    display:block;
+}
+
+input[type="text"],
+input[type="password"]
+{
+    width:100%;
+}
+
+/* Utilities */
+.btn
+{
+    display:inline-block;
+    border:none;
+    cursor:pointer;
+    padding:0.8rem 1rem;
+    margin-top:1.5rem;
+    position:relative;
+    transition:all var(--animation-speed) ease;
+}
+.btn-primary
+{
+    background-size:900px;
+    background:var(--primary-color);
+    color:var(--light-color);
+}
+.btn-secondary
+{
+    background:var(--secondary-color);
+    color:var(--light-color);
+}
+.btn-google
+{
+    background:var(--google);
+    color:var(--dark-color);
+}
+.btn-facebook
+{
+    background:var(--facebook);
+    color:var(--light-color);
+}
+.btn-dark
+{
+    background:var(--dark-color);
+    color:var(--light-color);
+}
+.btn-long
+{
+    display:block;
+    width:100%;
+}
+
+
+.container
+{
+    max-width:var(--max-width);
+    margin:auto;
+
+}
+
+.lead
+{
+    font-size:1.2rem;
+}
+
+.logo
+{
+    font-size:2rem;
+}
+
+/* Login */
+#login
+{
+    background:var(--primary-color);
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+#login .container
+{
+    background:#fff;
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    grid-gap:2rem;
+    box-shadow:5px 5px 15px rgb(99,95,95);
+}
+
+#login .container .login-content
+{
+    padding:1.4rem 2.5rem;
+}
+
+#login .container .login-content2 
+{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:#ccc;
+}
+
+#login .container .login-content .btn
+{
+    margin-top:2.4rem;
+}
+
+#login .container .login-content input[type="text"],
+#login .container .login-content input[type="password"]
+{
+    padding:0.4rem;
+    margin-top:0.6rem;
+}
+
+
+#login .container .login-content .form-grp input[type="text"]:focus,
+#login .container .login-content .form-grp input[type="password"]:focus
+{
+    border-color:purple;
+    outline-width:0;
+    transition:border var(--animation-speed) ease;
+}
+
+#login .container .login-content1 .form-grp
+{
+    margin-top:1.6rem;
+    padding-bottom:0.6rem;
+}
+
+#login .container .login-content1 .logo
+{
+    color:var(--light-color);
+    text-shadow:1px 1px 12px purple;
+    padding-bottom:2rem;
+}
+
+#login .container .login-content1 .lead
+{
+    margin-bottom:2.5rem;
+}
+
+#login .container .login-content2 .lead
+{
+    color:var(--light-color);
+    padding-bottom:2rem;
+}
+
+#login .container .login-content2 .btn
+{
+    text-align:center;
+}
+
+#login .container .login-content2 .btn i
+{
+    margin-right:1rem;
+}
+
+#login .container .login-content .form-grp input[type="text"],
+#login .container .login-content .form-grp input[type="password"]
+{
+    border:none;
+    border-bottom:2px solid var(--secondary-color);
+}
+
+
+.btn:hover
+{
+    background-position:150px;
+}
+.btn-google:hover
+{
+    opacity:0.6;
+}

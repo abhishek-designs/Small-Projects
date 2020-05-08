@@ -1,0 +1,42 @@
+html body {
+  height: 100vh;
+  background: #bbb;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; }
+
+a {
+  text-decoration: none; }
+
+.btn-primary, .btn-dark, .btn-secondary, .btn-light {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 0.6rem 1.5rem;
+  border-radius: 9px;
+  transition: all 0.3s ease; }
+
+.btn-primary {
+  background: #0077ff;
+  color: #fff; }
+  .btn-primary:hover {
+    background: #004799; }
+
+.btn-dark {
+  background: #333;
+  color: #fff; }
+  .btn-dark:hover {
+    background: #666666; }
+
+.btn-secondary {
+  background: maroon;
+  color: #fff; }
+  .btn-secondary:hover {
+    background: #e60000; }
+
+.btn-light {
+  background: #fff;
+  color: #333; }
+  .btn-light:hover {
+    background: #cccccc; }

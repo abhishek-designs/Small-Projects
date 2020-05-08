@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Exo+2&family=Gotu&family=Permanent+Marker&family=Satisfy&family=Ubuntu:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Exo+2&family=Gotu&family=Permanent+Marker&family=Satisfy&family=Ubuntu:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Exo+2&family=Gotu&family=Permanent+Marker&family=Satisfy&family=Ubuntu:wght@300;400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html body {
+  font-family: "Baloo Paaji 2", sans-serif;
+  line-height: 1.4;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  html body .container {
+    max-width: 400px;
+    margin: auto;
+    flex: 1;
+    box-shadow: 0 0 20px #4ac5f5;
+    padding: 5rem 2rem;
+    height: 70vh;
+    border-radius: 15px; }
+    html body .container .form-grp {
+      margin-bottom: 4rem; }
+      html body .container .form-grp label {
+        display: block;
+        padding-bottom: 0.6rem;
+        margin-left: 6%;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: #0b97ce; }
+      html body .container .form-grp input {
+        font-family: 'Baloo Paaji 2',san-serif;
+        padding: 0.5rem 0.6rem;
+        width: 90%;
+        border: none;
+        font-size: 1rem;
+        border-bottom: 2px solid #bbb;
+        transition: all 0.3s ease; }
+        html body .container .form-grp input:focus {
+          outline-width: 0;
+          border-color: #0b97ce; }
+      html body .container .form-grp input[type="password"] {
+        font-weight: bold; }
+      html body .container .form-grp i {
+        margin-right: 0.4rem; }
+    html body .container .btn {
+      padding: 1rem 0.6rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      width: 100%;
+      margin-top: 3rem;
+      font-family: 'Baloo Paaji 2',sans-serif;
+      transition: all 0.3s ease; }
+    html body .container .btn-primary {
+      background: #0b97ce;
+      color: #fff; }
+      html body .container .btn-primary:hover {
+        background: #4ac5f5; }
+    html body .container .btn-dark {
+      background: #333;
+      color: #fff; }
+      html body .container .btn-dark:hover {
+        background: #666666; }
+    html body .container .btn-secondary {
+      background: maroon;
+      color: #fff; }
+      html body .container .btn-secondary:hover {
+        background: #4d0000; }
+    html body .container .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 6px #cccccc; }
+    html body .container .btn:focus {
+      outline-width: 0; }

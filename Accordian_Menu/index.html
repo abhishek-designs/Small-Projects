@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordian Menu</title>
+    <style>
+        *
+        {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        a
+        {
+            text-decoration:none;
+            color:#333;
+        }
+
+        li
+        {
+            list-style:none;
+        }
+
+        html,body
+        {
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container
+        {
+            border-radius:10px;
+            overflow:hidden;
+            
+        }
+
+        .item
+        {
+            text-align:center;
+            /* border-top:1px solid #333; */
+            overflow:hidden;
+            
+        }
+
+        .menu
+        {
+            
+            /* padding:1rem; */
+            overflow:hidden;
+            /* height:90vh; */
+            width:300px;
+        }
+
+        .menu .btn
+        {
+            display:block;
+            background:#0077ff;
+            color:#fff;
+            padding:1rem 5rem;
+            /* width:100%; */
+            /* overflow:hidden; */
+            position:relative;
+            border:1px solid #fff;
+            
+        }
+
+        .menu .btn::before
+        {
+            content:"";
+            position:absolute;
+            height:40px;
+            width:40px;
+            transform:rotate(45deg);
+            top:17px;
+            left:15px;
+            background:inherit;
+            z-index:1;
+            opacity:0;
+        }
+
+        .smenu
+        {
+            
+            overflow:hidden;
+            background:#333;
+            /* height:9.4rem; */
+            max-height:0;
+            transition:max-height 0.3s ease;
+        }
+
+
+        .menu .sub-btn
+        {
+            display:block;
+            color:#fff;
+            text-align:center;
+            padding:0.7rem 0;
+            /* width:100%; */
+            /* padding:1rem; */
+            /* overflow:hidden; */
+            margin:0.6rem 5rem;
+            position:relative;
+        }
+
+        .menu .sub-btn:before
+        {
+            content:"";
+            position:absolute;
+            width:5px;
+            height:100%;
+            left:-80px;
+            top:2px;
+            background:#0077ff;
+            transition:opacity 0.3s ease;
+            opacity:0;
+        }
+
+        .btn:hover
+        {
+            background:#0084ff;
+        }
+
+        .item:focus-within .btn:before
+        {
+            opacity:1;
+        }
+
+        .menu .sub-btn:hover:before
+        {
+            opacity:1;
+        }
+
+        .item:focus-within .smenu
+        {
+            max-height:20rem;
+        }
+
+        /* .item:focus
+        {
+            max-height:0;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <li class="item" id="menu1">
+                <a href="#menu1" class="btn">Menu 1</a>
+
+                <div class="smenu">
+                    <a href="#" class="sub-btn">Sub Menu 1</a>
+                    <a href="#" class="sub-btn">Sub Menu 2</a>
+                    <a href="#" class="sub-btn">Sub Menu 4</a>
+                    <a href="#" class="sub-btn">Sub Menu 5</a>
+                    <a href="#" class="sub-btn">Sub Menu 6</a>
+                </div>
+            </li>
+
+            <li class="item" id="menu2">
+                <a href="#menu2" class="btn">Menu 2</a>
+
+                <div class="smenu">
+                    <a href="#" class="sub-btn">Sub Menu 1</a>
+                    <a href="#" class="sub-btn">Sub Menu 2</a>
+                    <a href="#" class="sub-btn">Sub Menu 3</a>
+                </div>
+            </li>
+
+            <li class="item" id="menu3">
+                <a href="#menu3" class="btn">Menu 3</a>
+
+                <div class="smenu">
+                    <a href="#" class="sub-btn">Sub Menu 1</a>
+                    <a href="#" class="sub-btn">Sub Menu 2</a>
+                    
+                </div>
+            </li>
+            
+            <li class="item" id="menu4">
+                <a href="#menu4" class="btn">Menu 4</a>
+
+                <div class="smenu">
+                    <a href="#" class="sub-btn">Sub Menu 1</a>
+                    <a href="#" class="sub-btn">Sub Menu 2</a>
+                    <a href="#" class="sub-btn">Sub Menu 3</a>
+                </div>
+            </li>
+        </div>
+        
+    </div>
+</body>
+</html>
