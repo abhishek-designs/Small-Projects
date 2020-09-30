@@ -1,0 +1,36 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body
+{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height:100vh;
+    overflow:hidden;
+}
+
+.container
+{
+    max-width:85%;
+    height:80%;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.head-1
+{
+    text-align:center;
+    padding-top:1.5rem;
+}
+
+.box
+{
+    height:50%;
+    width:50%;
+}

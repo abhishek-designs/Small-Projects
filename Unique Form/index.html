@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Form</title>
+    <style>
+        /* Default settings */
+        *
+        {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+         html,body
+         {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:100%;
+         }
+
+         /* Heading style */
+         h1
+         {
+             padding-bottom:5rem;
+             color:#333;
+         }
+
+         .primary
+         {
+             color: #0077ff;
+         }
+
+         /* Form container which is relative */
+         .form-grp
+         {
+            position:relative;
+            width:250px;
+            height:50px;
+            overflow:hidden;
+            /* background:blue; */
+         }
+
+         /* Input field which is absolute */
+         .form-grp input
+         {
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            border:none;
+            outline:0;
+            padding-top:20px;
+         }
+
+         /* All the effects are done on the label only and its span element(.label-content) */
+         /* label is absolute to the form container */
+         .form-grp .label-name
+         {
+             position:absolute;
+             top:0;
+             bottom:0;
+             height:100%;
+             width:100%;
+             pointer-events:none; /* As we cover the label on the form container the functionality of the input field gets disabled for this pointer-events property will work for that */
+             padding-top:20px;
+             border-bottom:1px solid #333;
+             
+         }
+
+         /* This span element act as a specific container for the text so we can apply effects only on the text */
+         .form-grp .label-name .label-content
+         {
+             position:absolute;
+             bottom:3px;
+             transition:all 0.3s ease;
+         }
+
+         /* This ::after selector is used for the blue border which slide in when we focus on the input */
+         .form-grp .label-name::after
+         {
+             content:'';
+             position:absolute;
+             height:100%;
+             width:100%;
+             border-bottom:3px solid #0077ff;
+             left:0;
+             bottom:-1px;
+             transform:translateX(-250px);
+             transition:all 0.3s ease;
+         }
+
+         /* When we click on the input the blue bottom border gets slide in and also it checks wether the text is written or not inside the field as we focus out to the input field */
+         /* This is achieved by the :valid selector which checks wether the text is written or not in the required field */
+         .form-grp input:focus + .label-name::after,
+         .form-grp input:valid + .label-name::after
+         {
+            transform:translateX(0);
+         }
+
+         /* When we click on the input the span content specific for the text get slide up and shrinks */
+         /* This is achieved by the :valid selector which checks wether the text is written or not in the required field */
+         .form-grp input:focus + .label-name .label-content,
+         .form-grp input:valid + .label-name .label-content
+         {
+             font-size:0.8rem;
+             transform:translateY(-25px);
+         }
+
+    </style>
+</head>
+<body>
+    <h1 class="head"><span class="primary">Fancy</span> Form Field</h1>
+    <div class="form-grp">
+        <input type="text" name="name" id="name" class="name-field" autocomplete="off" required>
+        <label for="name" class="label-name">
+            <span class="label-content">Name</span>
+        </label>
+    </div>
+</body>
+</html>
