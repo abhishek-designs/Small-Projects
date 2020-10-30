@@ -12,7 +12,7 @@ container.addEventListener('mousemove',(e) => {
     card.style.transform = `rotateX(${yAxis}deg) rotateY(${xAxis}deg)`;
     // head.style.transform = 'translateZ(50px)';
     // lead.style.transform = 'translateZ(45px)';
-    content.style.transform = 'translateZ(50px)';
+    content.style.transform = 'translateZ(60px)';
 
     card.style.transition = 'none';
 });
