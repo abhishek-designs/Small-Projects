@@ -31,36 +31,46 @@ html,body
 {
     height:100%;
     width:60%;
+    background:linear-gradient(to bottom right,#4ca9df,#292e91);
     box-shadow: 0px 5px 15px rgba(0,0,0,0.4),
                 0px 15px 25px rgba(0,0,0,0.4);
     border-radius:30px;
-    padding:1.5rem;
+    padding:0 2.5rem;
+    display:flex;
+    align-items:center;
     /* transition:transform 0.3s ease; */
     transform-style:preserve-3d;
+}
+
+.container .card .content
+{
+    color:#fff;
 }
 
 .container .card .content .head
 {
     text-align:center;
     padding-bottom:2rem;
-    color:rgb(206, 63, 206);
+    /* color:rgb(206, 63, 206); */
 }
 
 .container .card .content .btn
 {
     display:inline-block;
     padding:0.6rem 1rem;
-    margin-top:1.5rem;
-    background:linear-gradient(45deg,rgb(206, 63, 206),rgb(89, 91, 194));
-    background-size:100px;
+    margin-top:2.5rem;
+    background:#363b94;
+    width:100%;
+    text-align:center;
     color:#fff;
     border-radius:20px;
     cursor:pointer;
     text-decoration:none;
     border:none;
-    transition:background-size 0.3s ease;
+    transition:background-color 0.3s ease;
 }
 .container .card .content .btn:hover
 {
-    background-size:500px;
+    background-color:#fff;
+    color:#333;
 }
